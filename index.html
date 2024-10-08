@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="BootStrap_Document/css/bootstrap.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .container {    
+            display: flex;
+            max-width: 900px;
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(60deg, #ffffff, #2f0053);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .left-side {
+            background-color: #003366;
+            color: #fff;
+            width: 53%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+        }
+
+        .logo img {
+            position: absolute;
+            left: 5px;
+            top: 0;
+            width: 300px;
+        }
+
+        .logo h1 {
+            margin: 20px 0 0;
+            font-size: 24px;
+        }
+     
+
+        .illustration img {
+            margin-top: 30px;
+            width: 100%;
+        }
+        .illustration .logopicture {
+            transition: transform 0.3s ease; /* Smooth transition effect */
+        }
+
+        .illustration .logopicture:hover {
+            /* transform: scale(1.2);      */
+            /* transform: translate(-50px , -100px); */
+            /* transform:  skew(20deg, 10deg); */
+            transform: rotate(15deg);
+        }
+        .right-side {
+            width: 54%;
+            height: 459px;
+            background-color: #fff;
+            padding: 40px;
+            position: absolute;
+            right: 0;
+            top: 51%;
+            left: 21rem;
+            transform: translateY(-50%);
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+            z-index: 10;
+        }
+
+        .login-form {
+            width: 100%;
+        }
+
+        .login-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #003366;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .input-group img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .input-group input {
+            border: none;
+            width: 100%;
+            outline: none;
+            font-size: 16px;
+            position: relative;
+            display: inline-block;
+        }
+        .input-group{
+            border-radius: 0px 10px;
+        }
+        .input-group:focus-within {
+         border-color: blue;
+        }
+        
+        .show-password img {
+            width: 20px;
+            cursor: pointer;
+        }
+
+        .login-btn {
+            width: 100%;
+            background-color: #003366;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius:  0  30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #002244;
+        }
+
+        /* Flexbox to center inner container */
+        .bg-light {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Media Query for screens with max width of 700px */
+        @media screen and (max-width: 700px) {
+            .left-side {
+                display: none;
+            }
+            .right-side {
+                width: 100%;
+                position: static;
+                transform: none;
+                border-radius: 10px;
+                height: auto;
+                top: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="container bg-light mt-5 p-5">
+        <div class=" pt-2 ps-3  pe-3 container  pb-2 mb-3 mt-5">
+            <div class="left-side"> 
+                <div class="logo">
+                    <img  src="image/school-aub-removebg-preview.png" alt="ACLEDA University">
+                    
+                </div>
+                <div class="illustration">
+                    <img class="logopicture" src="image/undraw_love_re_mwbq.svg" alt="Illustration">
+                </div>
+            </div>
+            <div class="right-side">
+                <form class="login-form pt-5">
+                    <h2>Login</h2>
+                    <div class="input-group">
+                        <label for="username-email"></label>
+                        <input  type="text" id="username-email" placeholder="Input your Username or Email">
+                    </div>
+                    <div class="input-group">
+                        <label for="password"></label>
+                        <input type="password" id="password" placeholder="Input enter your Password">
+                    </div>
+                    <button type="submit" class="login-btn">Log in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
